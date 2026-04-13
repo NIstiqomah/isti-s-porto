@@ -1,0 +1,16 @@
+[
+  {
+    "role": "Web Programmer",
+    "company": "Pusdatin Kemensos",
+    "startDate": "2022",
+    "endDate": "Present",
+    "desc": "Developed UI using React and built RESTful APIs using Laravel"
+  },
+  {
+    "role": "R&D WebGIS",
+    "company": "PENS",
+    "startDate": "2021",
+    "endDate": "2022",
+    "desc": "Built WebGIS system using CodeIgniter and Leaflet"
+  }
+]

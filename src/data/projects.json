@@ -1,0 +1,82 @@
+[
+  {
+    "title": "PBI System (Health Insurance Assistance)",
+    "description": "End-to-end workflow system for social assistance beneficiaries",
+    "challenge": "Manual and complex processes for submission, verification, and approval of beneficiaries caused delays, data inconsistencies, and performance bottlenecks when handling large-scale data accessed by many users simultaneously.",
+    "solution": "Developed a full workflow system and dashboard using Laravel, React.js, and SQL Server with RESTful APIs. Implemented optimized database queries, indexing, pagination, and efficient API handling to ensure smooth performance under high concurrent user access.",
+    "impact": "Improved processing efficiency, system scalability, and data transparency, enabling reliable performance even with large datasets and high user concurrency.",
+    "tags": ["Laravel", "React.js", "SQL Server", "REST API"],
+    "color": "from-purple-400 to-pink-500",
+    "emoji": "📊"
+  },
+  {
+    "title": "Human Resource Management System (Kemensos)",
+    "description": "User and role management system for internal operations",
+    "challenge": "User access control and employee management were not centralized and lacked security features.",
+    "solution": "Built HR system with role-based access, OTP login, password reset, and account activation features.",
+    "impact": "Enhanced system security and streamlined user management.",
+    "tags": ["Laravel", "React.js", "Authentication"],
+    "color": "from-blue-400 to-cyan-500",
+    "emoji": "👥"
+  },
+  {
+    "title": "Graduation & PPSE Module",
+    "description": "Social assistance eligibility and graduation evaluation system",
+    "challenge": "Difficulty in tracking beneficiary eligibility and managing graduation process.",
+    "solution": "Developed modules for eligibility evaluation and PPSE workflow with optimized backend processing for large-scale data.",
+    "impact": "Improved decision-making process and data handling performance.",
+    "tags": ["Laravel", "React.js", "REST API", "Data Processing", "Workflow"],
+    "color": "from-emerald-400 to-teal-500",
+    "emoji": "📈"
+  },
+  {
+    "title": "Change of Domicile System",
+    "description": "Cross-region social assistance management system",
+    "challenge": "Complex coordination between regional offices for domicile changes.",
+    "solution": "Built multi-step workflow system with document upload, approval tracking, and asset data management.",
+    "impact": "Ensured accurate redistribution of social assistance data.",
+    "tags": ["Laravel", "React.js", "Workflow", "Document Upload", "Tracking"],
+    "color": "from-orange-400 to-rose-500",
+    "emoji": "📍"
+  },
+  {
+    "title": "Audit Verification System (BPK)",
+    "description": "Audit validation system for social assistance data",
+    "challenge": "Manual audit validation process led to inconsistencies and lack of accountability.",
+    "solution": "Developed verification system with survey workflows, dynamic forms, and data validation features.",
+    "impact": "Improved audit accuracy and accountability across regional offices.",
+    "tags": ["Laravel", "React.js", "Form Validation", "Dynamic Form", "Survey Workflow"],
+    "color": "from-amber-400 to-yellow-500",
+    "emoji": "✅"
+  },
+  {
+    "title": "Company Administration System",
+    "description": "Internal administration system for Digital Care Indonesia",
+    "challenge": "Managing employee data and internal administrative processes manually caused inefficiencies and data inconsistency.",
+    "solution": "Developed a fullstack web application using Next.js with PostgreSQL and Prisma ORM to handle employee management and internal workflows efficiently.",
+    "impact": "Improved administrative efficiency and centralized employee data management.",
+    "tags": ["Next.js", "PostgreSQL", "Prisma"],
+    "color": "from-violet-400 to-fuchsia-500",
+    "emoji": "🏢"
+  },
+  {
+    "title": "WebGIS Network Quality Monitoring",
+    "description": "WebGIS-based system for monitoring network quality (QoS & QoE)",
+    "challenge": "Telecommunication network data was difficult to visualize and analyze effectively.",
+    "solution": "Built a WebGIS application using PHP (CodeIgniter), Leaflet, and MySQL to visualize cellular and digital TV network quality.",
+    "impact": "Enabled better analysis and visualization of network performance data.",
+    "tags": ["PHP", "CodeIgniter", "Leaflet", "MySQL"],
+    "color": "from-teal-400 to-green-500",
+    "emoji": "🗺️"
+  },
+  {
+    "title": "Digital Library (Bina Desa Project)",
+    "description": "Web-based digital library for elementary school students",
+    "challenge": "Limited access to educational materials for students in rural areas.",
+    "solution": "Developed a website for reading and downloading educational materials with search, filter, and online reading features.",
+    "impact": "Improved accessibility to learning resources for students.",
+    "tags": ["HTML", "CSS", "JavaScript", "MySQL"],
+    "color": "from-pink-400 via-rose-400 to-orange-400",
+    "emoji": "📚"
+  }
+]

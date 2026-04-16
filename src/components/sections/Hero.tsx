@@ -5,33 +5,48 @@ import { Code2, Download, Eye, Sparkles } from 'lucide-react';
 import { getProfile } from "@/lib/data"
 import Image from "next/image";
 import { Sparkle as SparkleIcon } from "lucide-react"; // Rename agar tidak bentrok
+import { useEffect, useMemo, useState } from "react";
 
 export default function Hero() {
     const profile = getProfile()
+    const [mounted, setMounted] = useState(false)
 
-    const Sparkle = ({ delay }: { delay: number }) => (
-        <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-                opacity: [0, 1, 0],
-                scale: [0, 1.2, 0],
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * -150],
-            }}
-            transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: delay,
-                ease: "easeInOut",
-            }}
-            // --- PERUBAHAN DISINI: Ubah bg-white menjadi bg-purple-500 ---
-            className="absolute w-1 h-1 bg-purple-500 rounded-full blur-[1px]"
-            style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-            }}
-        />
-    );
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const Sparkle = ({ delay }: { delay: number }) => {
+        const random = useMemo(() => ({
+            x: Math.random() * 100 - 50,
+            y: Math.random() * -150,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            duration: 3 + Math.random() * 2,
+        }), [])
+
+        return (
+            <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                    opacity: [0, 1, 0],
+                    scale: [0, 1.2, 0],
+                    x: [0, random.x],
+                    y: [0, random.y],
+                }}
+                transition={{
+                    duration: random.duration,
+                    repeat: Infinity,
+                    delay: delay,
+                    ease: "easeInOut",
+                }}
+                className="absolute w-1 h-1 bg-purple-500 rounded-full blur-[1px]"
+                style={{
+                    left: random.left,
+                    top: random.top,
+                }}
+            />
+        )
+    }
 
     return (
         <section id="about" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
@@ -113,9 +128,10 @@ export default function Hero() {
                 <div className="relative flex items-center justify-center min-h-[500px]">
                     {/* Container Efek Sparkling (Random Particles) */}
                     <div className="absolute inset-0 pointer-events-none">
-                        {[...Array(20)].map((_, i) => (
-                            <Sparkle key={i} delay={i * 0.2} />
-                        ))}
+                        {mounted &&
+                            [...Array(20)].map((_, i) => (
+                                <Sparkle key={i} delay={i * 0.2} />
+                            ))}
                     </div>
 
                     <motion.div
